@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvasContainer {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  background: white;
+}
+
+#flowerCanvas, #overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#controls {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 800px;
+}
+
+#shapeOptions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#shapeOptions label {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#shapeOptions input {
+  margin-right: 8px;
+}
+
+#customShapeContainer {
+  margin: 15px 0;
+}
+
+#customShapeData {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+#densityControl {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#densitySlider {
+  flex-grow: 1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+}
+
+#loading.hidden {
+  display: none;
+}
+
+#flowerDetails {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 800px;
+}
+
+.hidden {
+  display: none !important;
+}

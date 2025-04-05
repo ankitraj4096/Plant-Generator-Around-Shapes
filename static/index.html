@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Decoration Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Flower Decoration Generator</h1>
+  </header>
+  <main>
+    <div id="canvasContainer">
+      <canvas id="flowerCanvas" width="800" height="600"></canvas>
+      <canvas id="overlay" width="800" height="600"></canvas>
+    </div>
+    <section id="controls">
+      <div id="shapeOptions">
+        <label><input type="radio" name="shape" value="circle" checked> Circle</label>
+        <label><input type="radio" name="shape" value="heart"> Heart</label>
+        <label><input type="radio" name="shape" value="triangle"> Triangle</label>
+        <label><input type="radio" name="shape" value="square"> Square</label>
+        <label><input type="radio" name="shape" value="star"> Star</label>
+        <label><input type="radio" name="shape" value="pentagon"> Pentagon</label>
+        <label><input type="radio" name="shape" value="hexagon"> Hexagon</label>
+        <label><input type="radio" name="shape" value="diamond"> Diamond</label>
+        <label><input type="radio" name="shape" value="custom"> Custom</label>
+      </div>
+      <div id="customShapeContainer" class="hidden">
+        <textarea id="customShapeData" rows="5" cols="50" placeholder='Example: {"type": "2d", "points": [[100, 100], [700, 100], [400, 500]]}'></textarea>
+      </div>
+      <div id="densityControl">
+        <label>Density: <span id="densityValue">20</span></label>
+        <input type="range" id="densitySlider" min="5" max="50" value="20">
+      </div>
+      <button id="generateButton">Generate</button>
+      <div id="loading" class="hidden">Generating...</div>
+    </section>
+    <div id="flowerDetails"></div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
